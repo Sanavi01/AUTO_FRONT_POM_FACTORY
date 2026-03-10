@@ -5,3 +5,7 @@
 build
 
 .github/agents/
+
+# IDE and build folders
+.idea/
+target/
