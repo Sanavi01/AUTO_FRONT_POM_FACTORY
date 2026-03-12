@@ -1,30 +1,49 @@
-package test.java.com.restaurante.stepdefinitions;
+package com.restaurante.stepdefinitions;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
-public class PedidoMesaStepDefinitions {
+import com.restaurante.pages.MenuPage;
 
-	@Given("el cliente está en la pantalla de inicio del menú")
-	public void el_cliente_esta_en_la_pantalla_de_inicio_del_menu() {
-	}
+    public class PedidoMesaStepDefinitions {
 
-	@When("selecciona la mesa {string} desde el menú")
-	public void selecciona_la_mesa_desde_el_menu(String mesa) {
-	}
+        private MenuPage menuPage;
 
-	@And("modifica {int} unidad(es) de {string} al pedido")
-	public void modifica_unidades_de_producto_al_pedido(int cantidad, String producto) {
-	}
+        @Given("el cliente está en la pantalla de seleccion de mesa")
+        public void elClienteEstaEnLaPantallaDeSeleccionDeMesa() {
+            // TODO: navegar a la pantalla de selección de mesa
+        }
 
-	@And("confirma la compra del pedido")
-	public void confirma_la_compra_del_pedido() {
-	}
+        @When("selecciona la mesa {string} desde el menú")
+        public void seleccionaLaMesaDesdeElMenu(String mesa) {
+            // TODO: usar MesasPage.seleccionarMesaPorNumero(mesa)
+        }
 
-	@Then("recibe la confirmación de que la cocina ha recibido el pedido")
-	public void recibe_la_confirmacion_de_que_la_cocina_ha_recibido_el_pedido() {
-	}
+        @When("agrega una {string} al pedido")
+        public void agregaUnaOpcionProductoAlPedido(String opcionProducto) {
+            // TODO: seleccionar el producto por índice (opcionProducto) en MenuPage
+        }
 
-}
+        @And("aumenta {string} vez(ces) la cantidad de {string}")
+        public void aumentaVecesLaCantidadDe(String vecesAumentar, String opcionProducto) {
+            // TODO: aumentar la cantidad del producto 'opcionProducto' 'vecesAumentar' veces
+        }
+
+        @And("disminuye {string} vez(ces) la cantidad de {string}")
+        public void disminuyeVecesLaCantidadDe(String vecesDisminuir, String opcionProducto) {
+            // TODO: disminuir la cantidad del producto 'opcionProducto' 'vecesDisminuir' veces
+        }
+
+        @When("confirma el pedido")
+        public void confirmaElPedido() {
+            // TODO: confirmar/completar el pedido
+        }
+
+        @Then("recibe la confirmación de que la cocina ha recibido el pedido")
+        public void recibeLaConfirmacionDeQueLaCocinaHaRecibidoElPedido() {
+            // TODO: validar confirmación/alerta de que la cocina recibió el pedido
+        }
+
+    }

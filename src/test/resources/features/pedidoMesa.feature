@@ -1,13 +1,16 @@
-Feature: Reserva de mesa y envío directo a cocina
+Feature: Selección de mesa, eleccion de pedido y confirmación
 
-  Scenario Outline: Cliente identifica su mesa, realiza un pedido y recibe confirmación
-    Given el cliente está en la pantalla de inicio del menú
+  Scenario Outline: Cliente elige una mesa, realiza un pedido y recibe confirmación
+    Given el cliente está en la pantalla de seleccion de mesa
     When selecciona la mesa "<mesa>" desde el menú
-    And modifica "<cantidad>" unidad(es) de "<producto>" al pedido
-    And confirma la compra del pedido
+    And agrega una "<opcion_producto>" al pedido
+    And aumenta "<veces_aumentar>" vez(ces) la cantidad de "<opcion_producto>"
+    And disminuye "<veces_disminuir>" vez(ces) la cantidad de "<opcion_producto>"
+    And confirma el pedido
     Then recibe la confirmación de que la cocina ha recibido el pedido
 
-  Examples:
-    | mesa   | producto           | cantidad |
-    | Mesa 5 | Pizza Margarita    | 2        |
-    | Mesa 10| Ensalada César     | 1        |
+
+    Examples:
+      | mesa | opcion_producto | veces_aumentar | veces_disminuir |
+      | 5    | 4    | 3              | 1               |
+      | 8    | 2          | 2              | 1               |
