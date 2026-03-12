@@ -41,20 +41,14 @@ public class PedidoStepDefinitions {
     }
 
     @And("aumenta {string} vez\\(ces) la cantidad de la opción {string}")
-    public void aumentaCantidad(String vecesAumentar, String opcionProducto) {
-        seleccionPedidoPage.aumentarCantidad(
-            Integer.parseInt(opcionProducto),
-            Integer.parseInt(vecesAumentar)
-        );
-    }
+public void aumentaCantidad(String vecesAumentar, String opcionProducto) {
+    seleccionPedidoPage.aumentarCantidad(Integer.parseInt(vecesAumentar));
+}
 
-    @And("disminuye {string} vez\\(ces) la cantidad de la opción {string}")
-    public void disminuyeCantidad(String vecesDisminuir, String opcionProducto) {
-        seleccionPedidoPage.disminuirCantidad(
-            Integer.parseInt(opcionProducto),
-            Integer.parseInt(vecesDisminuir)
-        );
-    }
+@And("disminuye {string} vez\\(ces) la cantidad de la opción {string}")
+public void disminuyeCantidad(String vecesDisminuir, String opcionProducto) {
+    seleccionPedidoPage.disminuirCantidad(Integer.parseInt(vecesDisminuir));
+}
 
     @And("hace click en Comprar")
     public void haceClickEnComprar() {
@@ -69,7 +63,7 @@ public class PedidoStepDefinitions {
     @Then("recibe la confirmación de que la cocina ha recibido el pedido")
     public void recibeConfirmacion() {
         Assertions.assertThat(confirmacionPage.pedidoFueConfirmado())
-                  .as("La pantalla debería mostrar 'Pedido confirmado'")
-                  .isTrue();
+                .as("La pantalla debería mostrar 'Pedido confirmado'")
+                .isTrue();
     }
 }

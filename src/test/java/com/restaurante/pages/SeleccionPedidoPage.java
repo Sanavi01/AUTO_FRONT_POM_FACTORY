@@ -10,13 +10,13 @@ public class SeleccionPedidoPage extends BasePage {
     @FindBy(css = "h1")
     private WebElementFacade tituloPagina;
 
-    @FindBy(css = "button[class*='bg-primary'][aria-label*='Agregar']")
+    @FindBy(xpath = "//button[normalize-space()='Agregar' or (contains(.,'Agregar') and not(contains(.,'unidad')))]")
     private List<WebElementFacade> botonesAgregar;
 
-    @FindBy(css = "button[aria-label*='Agregar una unidad']")
+    @FindBy(xpath = "//div[contains(@class,'bg-accent/10')]//button[contains(@aria-label,'Agregar una unidad')]")
     private List<WebElementFacade> botonesAumentar;
 
-    @FindBy(css = "button[aria-label*='Quitar una unidad']")
+    @FindBy(xpath = "//div[contains(@class,'bg-accent/10')]//button[contains(@aria-label,'Quitar una unidad')]")
     private List<WebElementFacade> botonesDisminuir;
 
     @FindBy(xpath = "//button[.//span[text()='Comprar']]")
@@ -27,18 +27,17 @@ public class SeleccionPedidoPage extends BasePage {
     public void agregarProducto(int opcionProducto) {
         botonesAgregar.get(opcionProducto - 1).click();
     }
-
-    public void aumentarCantidad(int opcionProducto, int veces) {
-        for (int i = 0; i < veces; i++) {
-            botonesAumentar.get(opcionProducto - 1).click();
-        }
+public void aumentarCantidad(int veces) {
+    for (int i = 0; i < veces; i++) {
+        botonesAumentar.get(0).click();
     }
+}
 
-    public void disminuirCantidad(int opcionProducto, int veces) {
-        for (int i = 0; i < veces; i++) {
-            botonesDisminuir.get(opcionProducto - 1).click();
-        }
+public void disminuirCantidad(int veces) {
+    for (int i = 0; i < veces; i++) {
+        botonesDisminuir.get(0).click();
     }
+}
 
     public void clickComprar() {
         clickElemento(btnComprar);
