@@ -3,8 +3,8 @@ Pequeña suite de pruebas automatizadas (Serenity + Gradle) E2E del Sistema de R
 
 ## Clonar el repositorio (SSH)
 ```bash
-git clone git@github.com:Sanavi01/AUTO_API_PETSTORE_SCREENPLAY.git
-cd AUTO_API_PETSTORE_SCREENPLAY
+git clone git@github.com:Sanavi01/AUTO_FRONT_POM_FACTORY.git
+cd AUTO_FRONT_POM_FACTORY
 ```
 
 ## Comando recomendado para ejecutar los tests
