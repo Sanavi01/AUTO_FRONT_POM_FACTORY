@@ -14,3 +14,4 @@ Feature: Selección de mesa, elección de pedido y confirmación
       | mesa | opcion_producto | veces_aumentar | veces_disminuir |
       | 5    | 4               | 3              | 1               |
       | 8    | 2               | 2              | 1               |
+      | 2    | 1               | 4              | 2              |

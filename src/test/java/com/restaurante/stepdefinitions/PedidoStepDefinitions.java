@@ -41,14 +41,14 @@ public class PedidoStepDefinitions {
     }
 
     @And("aumenta {string} vez\\(ces) la cantidad de la opción {string}")
-public void aumentaCantidad(String vecesAumentar, String opcionProducto) {
-    seleccionPedidoPage.aumentarCantidad(Integer.parseInt(vecesAumentar));
-}
+    public void aumentaCantidad(String vecesAumentar, String opcionProducto) {
+        seleccionPedidoPage.aumentarCantidad(Integer.parseInt(vecesAumentar));
+    }
 
-@And("disminuye {string} vez\\(ces) la cantidad de la opción {string}")
-public void disminuyeCantidad(String vecesDisminuir, String opcionProducto) {
-    seleccionPedidoPage.disminuirCantidad(Integer.parseInt(vecesDisminuir));
-}
+    @And("disminuye {string} vez\\(ces) la cantidad de la opción {string}")
+    public void disminuyeCantidad(String vecesDisminuir, String opcionProducto) {
+        seleccionPedidoPage.disminuirCantidad(Integer.parseInt(vecesDisminuir));
+    }
 
     @And("hace click en Comprar")
     public void haceClickEnComprar() {

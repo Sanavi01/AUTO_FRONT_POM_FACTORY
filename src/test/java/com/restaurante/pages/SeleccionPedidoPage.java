@@ -27,17 +27,18 @@ public class SeleccionPedidoPage extends BasePage {
     public void agregarProducto(int opcionProducto) {
         botonesAgregar.get(opcionProducto - 1).click();
     }
-public void aumentarCantidad(int veces) {
-    for (int i = 0; i < veces; i++) {
-        botonesAumentar.get(0).click();
-    }
-}
 
-public void disminuirCantidad(int veces) {
-    for (int i = 0; i < veces; i++) {
-        botonesDisminuir.get(0).click();
+    public void aumentarCantidad(int veces) {
+        for (int i = 0; i < veces; i++) {
+            botonesAumentar.get(0).click();
+        }
     }
-}
+
+    public void disminuirCantidad(int veces) {
+        for (int i = 0; i < veces; i++) {
+            botonesDisminuir.get(0).click();
+        }
+    }
 
     public void clickComprar() {
         clickElemento(btnComprar);

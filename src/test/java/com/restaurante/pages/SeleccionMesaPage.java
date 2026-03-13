@@ -7,9 +7,6 @@ import java.util.List;
 
 public class SeleccionMesaPage extends BasePage {
 
-    @FindBy(css = "h1")
-    private WebElementFacade tituloPagina;
-
     @FindBy(css = "div.grid button")
     private List<WebElementFacade> todasLasMesas;
 
@@ -21,8 +18,4 @@ public class SeleccionMesaPage extends BasePage {
 
     // ── Verificaciones ────────────────────────────────────────────────────
 
-    public boolean tituloPaginaEsCorrecto() {
-        return obtenerTexto(tituloPagina)
-                .equalsIgnoreCase("Selecciona tu mesa");
-    }
 }
