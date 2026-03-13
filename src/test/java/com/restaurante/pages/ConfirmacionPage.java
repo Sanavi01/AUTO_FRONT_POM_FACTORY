@@ -7,30 +7,12 @@ public class ConfirmacionPage extends BasePage {
 
     // "Pedido confirmado"
     @FindBy(css = "h1.text-4xl")
-    private WebElementFacade tituloPagina;
-
-    // "Tu pedido #xxxx fue enviado a cocina."
-    @FindBy(css = "p.text-muted-foreground")
-    private WebElementFacade mensajeConfirmacion;
-
-    // ID completo del pedido
-    @FindBy(css = "p.break-all")
-    private WebElementFacade idPedido;
+    private WebElementFacade MensajePedidoConfirmado;
 
     // ── Verificaciones ────────────────────────────────────────────────────
 
     public boolean pedidoFueConfirmado() {
-        return obtenerTexto(tituloPagina)
+        return obtenerTexto(MensajePedidoConfirmado)
                 .equalsIgnoreCase("Pedido confirmado");
-    }
-
-    public boolean mensajeContieneTexto(String texto) {
-        return obtenerTexto(mensajeConfirmacion)
-                .toLowerCase()
-                .contains(texto.toLowerCase());
-    }
-
-    public String obtenerId() {
-        return obtenerTexto(idPedido);
     }
 }
