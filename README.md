@@ -1,6 +1,15 @@
 # Descripción
 Pequeña suite de pruebas automatizadas (Serenity + Gradle) E2E del Sistema de Restaurante.
 
+## Proyecto base
+Automatización del proyecto "Sistema Restaurante". Para probar la aplicación base clona el repo y levanta Docker:
+
+```bash
+git clone https://github.com/lasilvi/Sistemas-de-pedidos-restaurante.git
+cd Sistemas-de-pedidos-restaurante
+docker compose up -d
+```
+
 ## Clonar el repositorio (SSH)
 ```bash
 git clone git@github.com:Sanavi01/AUTO_FRONT_POM_FACTORY.git
